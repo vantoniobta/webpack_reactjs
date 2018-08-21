@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
-
-
 import firebase from 'firebase';
-import { DB_CONFIG } from '../../config/config';
-import 'firebase/database';
 
+
+ var config = {
+    apiKey: "AIzaSyAUASp8VYHn_AJwkoZMCmr8-Ju2vJBPLg0",
+    authDomain: "test-59787.firebaseapp.com",
+    databaseURL: "https://test-59787.firebaseio.com",
+    projectId: "test-59787",
+    storageBucket: "test-59787.appspot.com",
+    messagingSenderId: "936872791000"
+  }
+  firebase.initializeApp(config)
 
 
 class Header extends Component {
 
 	constructor() {
 		super();
-
-		this.app = firebase.initializeApp(DB_CONFIG);
-		this.database  = this.app.database().ref().child('example');		
+		this.state = {
+			name : ''
+		}
 	}
 
-	componentDidMount(){
-		this.database.on('value', snap => {
+
+	componentWillMount(){
+		const nameRef  = firebase.database().ref().child('object').child('name')
+		nameRef.on('value' , (snapshot) => {
 			this.setState({
-				speed : snap.val()
+				name : snapshot.val()
 			})
 		})
 	}
@@ -32,9 +40,9 @@ class Header extends Component {
 			      <img src="https://fmtu.mx/wp-content/uploads/2018/05/FM-TU-Logo-letras-blancas-02.png"/>
 			      <br/><br/>
 			      <form>
-			      <p>{this.state.speed}</p>
+			      <h3>{this.state.name}</h3>
                     <div className="form-group">
-                       <input type="text" className="form-control" placeholder="Ingresa el codigo" />
+                       <input type="text" className="form-control" />
                     </div>
 			       </form>
 				</div>

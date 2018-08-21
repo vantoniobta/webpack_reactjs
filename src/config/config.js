@@ -1,9 +1,9 @@
 // Initialize Firebase
  export const DB_CONFIG = {
-    apiKey: "AIzaSyBU9zUt8oFPKDSSV8Qsix3w9-cYrqW-PN0",
-    authDomain: "boletos-228ca.firebaseapp.com",
-    databaseURL: "https://boletos-228ca.firebaseio.com",
-    projectId: "boletos-228ca",
-    storageBucket: "boletos-228ca.appspot.com",
-    messagingSenderId: "693253878424"
+ apiKey: "AIzaSyAUASp8VYHn_AJwkoZMCmr8-Ju2vJBPLg0",
+    authDomain: "test-59787.firebaseapp.com",
+    databaseURL: "https://test-59787.firebaseio.com",
+    projectId: "test-59787",
+    storageBucket: "test-59787.appspot.com",
+    messagingSenderId: "936872791000"
   }
