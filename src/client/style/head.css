@@ -1,0 +1,19 @@
+	   html,body{margin: 0px;}
+		header{
+			height: 70vh;
+			width: 100%;
+			background-image: url('https://farm9.staticflickr.com/8503/8317796183_dd2719c1ea_b.jpg');
+			background-color: rgb(13,73,90);
+			background-blend-mode: soft-light; /*ajustar los background con el texto*/ 
+			padding: 1px; /*quitar espacio arriba*/ 
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column; /*pasar de filas a columnas*/ 
+			background-size: cover;
+			background-position: center;
+		}
+		h3{
+			color: #fff;
+		}
